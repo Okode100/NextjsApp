@@ -22,7 +22,7 @@ export class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: any) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
@@ -36,7 +36,7 @@ export class ErrorBoundary extends Component<Props, State> {
                 Something went wrong
               </h2>
               <p className="text-gray-600 mb-4">
-                We're sorry, but there was an error loading this page.
+                We&apos;re sorry, but there was an error loading this page.
               </p>
               <button
                 onClick={() => this.setState({ hasError: false })}

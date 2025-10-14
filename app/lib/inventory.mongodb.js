@@ -1,11 +1,9 @@
-const database = 'inventory';
-const collection = 'product'
-
-use('database')
+const collection = 'product';
 
 db.createCollection(collection);
 
-const productData = [{
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const _productData = [{
     id: '1',
     name: 'Laptop Pro',
     price: 1299.99,
